@@ -1,5 +1,7 @@
 // No cambies los nombres de las funciones.
 
+const { initialMessage } = require("@11ty/eleventy/src/EleventyErrorHandler")
+
 function devolverPrimerElemento(array) {
   // Devuelve el primer elemento de un  array (pasado por parametro)
   // Tu código:
@@ -136,7 +138,13 @@ function multiplicarArgumentos() {
 function cuentoElementos(arreglo){
   //Realiza una función que retorne la cantidad de los elementos del arreglo cuyo valor es mayor a 18.
   //Escribe tu código aquí
-
+  var contador=[]
+  for (let i = 0 ; i < arreglo.length ; i++){
+    if (arreglo[i]>18){
+      contador.unshift(arreglo[i]);
+    }
+  }
+  return (contador.length);
 }
 
 
@@ -145,7 +153,13 @@ function diaDeLaSemana(numeroDeDia) {
   //Realiza una función que dado el número del día de la semana, retorne: Es fin de semana
   //si el día corresponde a Sábado o Domingo y “Es dia Laboral” en caso contrario. 
   //Escribe tu código aquí   
-  
+  switch (numeroDeDia){
+    case 1:
+    case 7:
+      return "Es fin de semana"
+    default:
+      return "Es dia Laboral"
+  }
 } 
 
 
@@ -153,7 +167,16 @@ function empiezaConNueve(n) {
   //Desarrolle una función que recibe como parámetro un número entero n. Debe retornar true si el entero 
   //inicia con 9 y false en otro caso.
   //Escribe tu código aquí
-  
+  var num = 0
+  if (n > 9){
+    num = Math.floor(n/10)
+  }
+  if (num === 9 || n === 9){
+    return true
+  }
+  else if (num !== 9 || n !== 9){
+    return false
+  }
 }
 
 
@@ -161,7 +184,19 @@ function todosIguales(arreglo) {
   //Escriba la función todosIguales, que indique si todos los elementos de un arreglo son iguales:
   //retornar true, caso contrario retornar false.
   //Escribe tu código aquí  
-  
+  var array = []
+  let contador = 0
+  for (let i = 0 ; i < arreglo.length ; i++){
+    array = arreglo[0]
+    if (arreglo[i] === array){
+      contador = contador + 1
+    }
+  }
+  if (contador !== arreglo.length){
+    return false
+  } else{
+    return true
+  }
 } 
 
 
@@ -170,6 +205,16 @@ function mesesDelAño(array) {
   // "Enero", "Marzo" y "Noviembre", guardarlo en nuevo array y retornarlo.
   //Si alguno de los meses no está, devolver: "No se encontraron los meses pedidos"
   // Tu código:
+  var arreglo = [];
+  for (let i = 0 ; i < array.length ; i++) {
+    if (array[i] === "Enero" || array[i] === "Marzo" || array[i] === "Noviembre") {
+      arreglo.push(array[i]);
+    }
+  }
+  if (arreglo.length <= 2){
+    return "No se encontraron los meses pedidos"
+  }
+  else {return arreglo}
 }
 
 
@@ -177,6 +222,14 @@ function mayorACien(array) {
   //La función recibe un array con enteros entre 0 y 200. Recorrer el array y guardar en un nuevo array sólo los
   //valores mayores a 100 (no incluye el 100). Finalmente devolver el nuevo array.
   // Tu código:
+  var masQueCien = []
+  masQueCien.pop()
+  for (let i = 0 ; i < array.length ; i++){
+    if (array[i] > 100){
+      masQueCien.push(array[i])
+    }
+  }
+  return masQueCien
 }
 
 
@@ -188,6 +241,17 @@ function breakStatement(numero) {
   //devolver: "Se interrumpió la ejecución"
   //Pista: usá el statement 'break'
   // Tu código:
+  var numeros = []
+  var i = 0
+  do {
+    numero += 2
+    i++
+    numeros.push(numero)
+    if (numero === i){
+      return "Se interrumpió la ejecución"
+    }
+  } while (i < 10)
+  return numeros
 }
 
 
@@ -198,6 +262,17 @@ function continueStatement(numero) {
   //Cuando el número de iteraciones alcance el valor 5, no se suma en ese caso y se continua con la siguiente iteración
   //Pista: usá el statement 'continue'
   // Tu código:
+  var numeros = []
+  var i = 0
+  do {
+    i++
+    if (i === 5){
+      continue
+    }
+    numero += 2
+    numeros.push(numero)
+  } while (i < 10)
+  return numeros
 }
 
 
