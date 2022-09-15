@@ -1,0 +1,16 @@
+#thirdDiv {
+background-color: red;
+height: 600px;
+width: 500px;
+padding: 50px;
+border: 10px solid rgb(0, 241, 72);
+}
+
+#spanId{
+    font-size: 18px;
+    margin: 45px;
+}
+
+h1{
+    color:aqua
+}
