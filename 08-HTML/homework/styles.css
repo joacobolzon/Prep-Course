@@ -1,16 +1,21 @@
 #thirdDiv {
-background-color: red;
+background-color:rgba(82, 0, 158, 0.534);
 height: 600px;
 width: 500px;
 padding: 50px;
-border: 10px solid rgb(0, 241, 72);
+border: 5px solid rgb(245, 151, 44);
 }
 
 #spanId{
     font-size: 18px;
     margin: 45px;
+    color:rgb(255, 255, 255)
 }
 
-h1{
-    color:aqua
+h1, h3, h4{
+    color:rgb(19, 185, 185)
+}
+
+body{
+    background-image: url("https://fondosmil.com/fondo/29366.jpg");
 }
