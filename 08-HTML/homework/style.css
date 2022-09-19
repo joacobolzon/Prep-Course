@@ -3,22 +3,27 @@ body{
     background-image: url("https://cvonline.me/assets/img/triangle-bg-green.png");
 }
 #firstDiv{
+    font-size: 22px;
+    font-family: sans-serif;
     color: rgb(12, 26, 156);
 }
 #secDiv{
-    color: rgb(29, 33, 68);
+    color: rgb(16, 23, 85);
     font-size: 20px;
+    font-family: sans-serif;
     width: 50%;
     border: 2px solid rgb(6, 234, 250);
     border-radius: 10px;
 }
 .tittleUl{
     color: rgb(29, 33, 68) ;
-    font-size: 18px;
+    font-size: 22px;
+    font-family: sans-serif;
 }
 .ul{
-    font-size: 18px;
-    width: 28%;
+    font-family: sans-serif;
+    font-size: 20px;
+    width: 35%;
     margin: 20px;
     border: 2px solid rgb(6, 234, 250);
     border-radius: 10px;
